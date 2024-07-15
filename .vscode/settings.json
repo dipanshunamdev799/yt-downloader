@@ -1,0 +1,7 @@
+{
+    "tabby.api.endpoint": "http://localhost:8080",
+    "tabby.experimental": {
+
+    },
+    "tabby.usage.anonymousUsageTracking": true
+}
