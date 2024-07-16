@@ -1,16 +1,14 @@
 //required modules
 const express = require("express");
 const app = express();
+const path = require('node:path');
 const port = 8080;
-
-//App parameters
 app.listen(port, () => {
   console.log(`Server active at http://localhost:${port}`);
 });
-app.set("title", "Ymate");
+app.set("title", "Ymate")
 app.set("view engine", "ejs");
 
-//ROUTING
-app.get("/", (req, res) => {
-  res.render("home");
-});
+//Routing
+const serverRouter = require("./routes/server");
+app.use("/",serverRouter);
